@@ -25,13 +25,13 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => '',
-        'schema'       => 'amuzik', // 'videoclub',
-        'hostname'     => '89.128.117.9',
+        'DSN'          => 'postgresql://neondb_owner:npg_Zsa0Sevf8cuX@ep-lingering-feather-a4ku41rc-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require',
+        'schema'       => 'amuzik',
+        'hostname'     => 'ep-lingering-feather-a4ku41rc-pooler.us-east-1.aws.neon.tech',
         'port'         => 5432,
-        'username'     => 'test',
-        'password'     => 'pp7856Mh',
-        'database'     => 'test',
+        'username'     => 'neondb_owner',
+        'password'     => 'npg_Zsa0Sevf8cuX',
+        'database'     => 'neondb',
         'DBDriver'     => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -39,7 +39,7 @@ class Database extends Config
         'charset'      => 'utf8',
         'dbcollat'     => 'utf8_general_ci',
         'swapPre'      => '',
-        'encrypt'      => false,
+        'encrypt'      => true, // Importante: usar conexión cifrada por sslmode=require
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
@@ -51,6 +51,7 @@ class Database extends Config
             'time'     => 'H:i:s',
         ],
     ];
+    
 
     //    /**
     //     * Sample database connection for SQLite3.
