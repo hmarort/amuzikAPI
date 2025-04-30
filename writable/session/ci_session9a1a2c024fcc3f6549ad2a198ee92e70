@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1745478203;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:5:{s:6:"nombre";s:5:"AAAAA";s:9:"apellidos";s:6:"AAAAAA";s:5:"email";s:18:"aaaaaaa@aaaaaa.com";s:8:"username";s:2:"Ab";s:8:"password";s:6:"123456";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:5:"error";s:3:"new";}error|s:31:"Todos los campos son requeridos";

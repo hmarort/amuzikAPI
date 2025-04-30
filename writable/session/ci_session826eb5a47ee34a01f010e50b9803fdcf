@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1745478702;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:5:{s:2:"id";s:1:"8";s:8:"username";s:18:"AbortofalliodeCors";s:5:"email";s:18:"aaaaaaa@aaaaaa.com";s:6:"nombre";s:10:"AAAAAAAAAA";s:9:"apellidos";s:8:"AAAAAAAA";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:5:"error";s:3:"new";}error|s:31:"Todos los campos son requeridos";

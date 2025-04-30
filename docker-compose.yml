@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    restart: unless-stopped
+    environment:
+      - CI_ENVIRONMENT=development
+    # No incluimos variables de postgres aquí ya que están en la configuración de CodeIgniter
+
+  # Puedes incluir o no el servicio PostgreSQL local para desarrollo
+  # db:
+  #   image: postgres:14
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_DB: postgres
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   pgdata:

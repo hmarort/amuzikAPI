@@ -1,0 +1,41 @@
+CRITICAL - 2025-04-23 07:16:40 --> Error: Call to undefined function App\Controllers\pg_lo_eof()
+[Method: POST, Route: find]
+in APPPATH/Controllers/BaseController.php on line 75.
+ 1 APPPATH/Controllers/UserController.php(39): App\Controllers\BaseController->base64()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-23 07:17:36 --> Error: Call to undefined function App\Controllers\pg_lo_eof()
+[Method: POST, Route: find]
+in APPPATH/Controllers/BaseController.php on line 75.
+ 1 APPPATH/Controllers/UserController.php(39): App\Controllers\BaseController->base64()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-23 07:17:51 --> Error: Call to undefined function App\Controllers\pg_lo_eof()
+[Method: POST, Route: find]
+in APPPATH/Controllers/BaseController.php on line 75.
+ 1 APPPATH/Controllers/UserController.php(39): App\Controllers\BaseController->base64()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-23 07:18:21 --> Error: Call to undefined function App\Controllers\pg_lo_eof()
+[Method: POST, Route: find]
+in APPPATH/Controllers/BaseController.php on line 75.
+ 1 APPPATH/Controllers/UserController.php(39): App\Controllers\BaseController->base64()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+DEBUG - 2025-04-23 11:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

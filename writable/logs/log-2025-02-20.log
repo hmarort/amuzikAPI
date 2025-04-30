@@ -1,0 +1,255 @@
+CRITICAL - 2025-02-20 07:46:10 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 10.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:33:46 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:34:19 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:34:30 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:34:38 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:34:56 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:35:00 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 09:35:17 --> TypeError: App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+[Method: GET, Route: /]
+in APPPATH/Controllers/Home.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-02-20 09:55:52 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections? in /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#7 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/app/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+#8 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#9 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2025-02-20 09:55:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-02-20 09:57:13 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections? in /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#7 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/app/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+#8 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#9 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2025-02-20 09:57:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-02-20 09:57:29 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections? in /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#7 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/app/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+#8 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(933): App\Controllers\Home->index()
+#9 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/public/index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2025-02-20 09:57:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;192.168.0.176&quot;, port 5432 failed: Connection timed out
+	Is the server running on that host and accepting TCP/IP connections?
+[Method: GET, Route: /]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Home.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 10:56:59 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 10:58:50 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 10:59:32 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:00:52 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:03:18 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:05:35 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:11:24 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:56:02 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-02-20 11:56:42 --> Error: Class "Firebase\JWT\JWT" not found
+[Method: POST, Route: api/login]
+in APPPATH/Controllers/AuthController.php on line 19.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(56): CodeIgniter\Boot::bootWeb()

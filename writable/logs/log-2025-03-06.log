@@ -1,0 +1,434 @@
+CRITICAL - 2025-03-06 10:59:02 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:06:30 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: POST, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:07:39 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: POST, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:09:21 --> ErrorException: Allowed memory size of 2147483648 bytes exhausted (tried to allocate 600000032 bytes)
+[Method: POST, Route: /]
+in APPPATH/Controllers/BaseController.php on line 69.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:12:36 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: /]
+in APPPATH/Controllers/Home.php on line 34.
+ 1 APPPATH/Controllers/Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 11:14:13 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: /]
+in APPPATH/Controllers/Home.php on line 37.
+ 1 APPPATH/Controllers/Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 11:15:35 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 600000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 69.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:17:01 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:17:04 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:17:38 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:18:34 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:18:39 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:21:14 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:23:58 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:24:06 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:24:28 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:24:54 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:24:58 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:26:14 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:26:52 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:27:18 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:27:27 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:27:32 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:28:07 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:28:15 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:28:38 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:29:40 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:30:22 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:30:24 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:33:53 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:33:59 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:34:06 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:34:17 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:34:29 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:35:19 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:35:57 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:36:07 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:36:21 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:36:21 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:36:49 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:37:41 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:40:17 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:41:03 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:41:12 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:41:40 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:43:31 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:11 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:12 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:13 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:16 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:18 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:39 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:44:40 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:09 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:10 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:12 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:14 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:15 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:17 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:19 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:21 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:22 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:23 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:37 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:46 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:45:55 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 11:47:37 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 500000032 bytes)
+[Method: GET, Route: /]
+in APPPATH/Controllers/BaseController.php on line 70.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-03-06 13:00:17 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: /]
+in APPPATH/Controllers/Home.php on line 38.
+ 1 APPPATH/Controllers/Home.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-03-06 13:26:14 --> ErrorException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 5: WHERE films.titless ilike '%%'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;. in /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php(206): pg_query()
+#2 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#7 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/app/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+#8 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(933): App\Controllers\Home->search()
+#9 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/public/index.php(60): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2025-03-06 13:26:14 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 5: WHERE films.titless ilike '%%'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+[Method: POST, Route: search]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 13:26:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 5: WHERE films.titless ilike '%%'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 211.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 13:26:14 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 5: WHERE films.titless ilike '%%'
+              ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(206): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 8 APPPATH/Controllers/Home.php(24): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-03-06 13:35:16 --> ErrorException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 6: AND films.titless ilike '%El%'
+            ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;. in /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/Postgre/Connection.php(206): pg_query()
+#2 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+#3 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+#4 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+#7 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/app/Controllers/Home.php(23): CodeIgniter\BaseModel->findAll()
+#8 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(933): App\Controllers\Home->search()
+#9 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 /var/www/vhosts/saicasl.eu/apirest.saicasl.eu/api3/api/public/index.php(60): CodeIgniter\Boot::bootWeb()
+#14 {main}
+CRITICAL - 2025-03-06 13:35:16 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 6: AND films.titless ilike '%El%'
+            ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+[Method: POST, Route: search]
+in SYSTEMPATH/Database/BaseConnection.php on line 692.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 4 APPPATH/Controllers/Home.php(23): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 13:35:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 6: AND films.titless ilike '%El%'
+            ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 211.
+ 1 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 6 APPPATH/Controllers/Home.php(23): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-03-06 13:35:16 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  column films.titless does not exist
+LINE 6: AND films.titless ilike '%El%'
+            ^
+HINT:  Perhaps you meant to reference the column &quot;films.title&quot;.
+in SYSTEMPATH/Database/Postgre/Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(206): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 6 SYSTEMPATH/Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/BaseModel.php(675): CodeIgniter\Model->doFindAll()
+ 8 APPPATH/Controllers/Home.php(23): CodeIgniter\BaseModel->findAll()
+ 9 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->search()
+10 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+11 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+12 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+14 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()

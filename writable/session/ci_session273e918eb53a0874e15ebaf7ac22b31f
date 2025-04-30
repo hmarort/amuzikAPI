@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1740692447;_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:4:{s:5:"title";s:2:". ";s:5:"genre";s:2:". ";s:7:"country";s:1:".";s:4:"date";s:0:"";}}__ci_vars|a:2:{s:13:"_ci_old_input";s:3:"new";s:5:"error";s:3:"new";}error|s:31:"Todos los campos son requeridos";

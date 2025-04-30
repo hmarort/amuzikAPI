@@ -1,0 +1,43 @@
+CRITICAL - 2025-04-25 06:48:45 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\UserModel::getFriends
+[Method: POST, Route: find]
+in SYSTEMPATH/Model.php on line 930.
+ 1 APPPATH/Controllers/UserController.php(41): CodeIgniter\Model->__call()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-25 06:53:17 --> ErrorException: Undefined variable $userId
+[Method: POST, Route: find]
+in APPPATH/Controllers/UserController.php on line 43.
+ 1 APPPATH/Controllers/UserController.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-25 08:05:30 --> Error: Cannot use object of type App\Models\UserModel as array
+[Method: POST, Route: find]
+in APPPATH/Controllers/UserController.php on line 300.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-04-25 08:24:37 --> There is no data to update.
+ERROR - 2025-04-25 08:31:39 --> There is no data to update.
+CRITICAL - 2025-04-25 08:35:14 --> ErrorException: Undefined variable $friendId
+[Method: POST, Route: friends]
+in APPPATH/Controllers/FriendController.php on line 15.
+ 1 APPPATH/Controllers/FriendController.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\FriendController->saveFriendship()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+ERROR - 2025-04-25 08:35:49 --> There is no data to update.
+ERROR - 2025-04-25 08:36:49 --> There is no data to update.

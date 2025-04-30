@@ -1,0 +1,74 @@
+CRITICAL - 2025-04-21 11:57:35 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: sign]
+in SYSTEMPATH/HTTP/IncomingRequest.php on line 537.
+ 1 SYSTEMPATH/HTTP/IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON()
+ 2 APPPATH/Controllers/UserController.php(61): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->sign()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-21 11:58:38 --> CodeIgniter\HTTP\Exceptions\HTTPException: Failed to parse JSON string. Error: Syntax error
+[Method: POST, Route: sign]
+in SYSTEMPATH/HTTP/IncomingRequest.php on line 537.
+ 1 SYSTEMPATH/HTTP/IncomingRequest.php(537): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidJSON()
+ 2 APPPATH/Controllers/UserController.php(61): CodeIgniter\HTTP\IncomingRequest->getJSON()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->sign()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-21 12:04:47 --> CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+[Method: POST, Route: find]
+in SYSTEMPATH/Format/JSONFormatter.php on line 45.
+ 1 SYSTEMPATH/Format/JSONFormatter.php(45): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(252): CodeIgniter\Format\JSONFormatter->format()
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(178): CodeIgniter\HTTP\Response->formatBody()
+ 4 APPPATH/Controllers/UserController.php(43): CodeIgniter\HTTP\Response->setJSON()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-21 12:09:25 --> CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+[Method: POST, Route: find]
+in SYSTEMPATH/Format/JSONFormatter.php on line 45.
+ 1 SYSTEMPATH/Format/JSONFormatter.php(45): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(252): CodeIgniter\Format\JSONFormatter->format()
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(178): CodeIgniter\HTTP\Response->formatBody()
+ 4 APPPATH/Controllers/UserController.php(43): CodeIgniter\HTTP\Response->setJSON()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-21 12:10:08 --> CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+[Method: POST, Route: find]
+in SYSTEMPATH/Format/JSONFormatter.php on line 45.
+ 1 SYSTEMPATH/Format/JSONFormatter.php(45): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(252): CodeIgniter\Format\JSONFormatter->format()
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(178): CodeIgniter\HTTP\Response->formatBody()
+ 4 APPPATH/Controllers/UserController.php(43): CodeIgniter\HTTP\Response->setJSON()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2025-04-21 12:12:31 --> CodeIgniter\Format\Exceptions\FormatException: Failed to parse JSON string. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+[Method: POST, Route: find]
+in SYSTEMPATH/Format/JSONFormatter.php on line 45.
+ 1 SYSTEMPATH/Format/JSONFormatter.php(45): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON()
+ 2 SYSTEMPATH/HTTP/ResponseTrait.php(252): CodeIgniter\Format\JSONFormatter->format()
+ 3 SYSTEMPATH/HTTP/ResponseTrait.php(178): CodeIgniter\HTTP\Response->formatBody()
+ 4 APPPATH/Controllers/UserController.php(43): CodeIgniter\HTTP\Response->setJSON()
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\UserController->find()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(60): CodeIgniter\Boot::bootWeb()
