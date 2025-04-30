@@ -66,10 +66,10 @@ class UserController extends BaseController
      */
     public function login()
     {
-        // $tokenValidation = $this->validateToken();
-        // if ($tokenValidation !== true) {
-        //     return $tokenValidation;
-        // }
+        $tokenValidation = $this->validateToken();
+        if ($tokenValidation !== true) {
+            return $tokenValidation;
+        }
         
         $jsonBody = $this->request->getJSON();
         $username = $jsonBody->username ?? null;
