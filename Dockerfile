@@ -45,9 +45,11 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Instalar dependencias de Composer (si usas Composer)
 RUN if [ -f "composer.json" ]; then composer install --no-interaction --optimize-autoloader; fi
 
-# Asegurarse de que el directorio writable sea escribible
+# Crear directorios writable con permisos adecuados
 RUN mkdir -p writable/cache writable/logs writable/session writable/uploads \
-    && chmod -R 777 writable
+    && chown -R www-data:www-data writable \
+    && find writable -type d -exec chmod 755 {} \; \
+    && find writable -type f -exec chmod 644 {} \;
 
 # Configurar el Virtual Host de Apache
 RUN echo "<VirtualHost *:80>\n\
@@ -60,6 +62,9 @@ RUN echo "<VirtualHost *:80>\n\
 
 # Exponer el puerto 80
 EXPOSE 80
+
+# Establecer www-data como propietario de todos los archivos
+RUN chown -R www-data:www-data /var/www/html
 
 # Iniciar Apache en primer plano
 CMD ["apache2-foreground"]
