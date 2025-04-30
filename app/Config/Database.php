@@ -25,7 +25,7 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => 'postgresql://neondb_owner:npg_Zsa0Sevf8cuX@ep-lingering-feather-a4ku41rc-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require',
+        'DSN'          => '',
         'schema'       => 'amuzik',
         'hostname'     => 'ep-lingering-feather-a4ku41rc-pooler.us-east-1.aws.neon.tech',
         'port'         => 5432,
@@ -39,7 +39,7 @@ class Database extends Config
         'charset'      => 'utf8',
         'dbcollat'     => 'utf8_general_ci',
         'swapPre'      => '',
-        'encrypt'      => true, // Importante: usar conexión cifrada por sslmode=require
+        'encrypt'      => true, // sslmode=require
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
@@ -50,7 +50,7 @@ class Database extends Config
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
-    ];
+    ];    
     
 
     //    /**
