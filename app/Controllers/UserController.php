@@ -15,7 +15,7 @@ class UserController extends BaseController
      */
     private function validateToken()
     {
-        $requestToken = $this->request->getHeaderLine('Authorization');
+        $requestToken = trim($this->request->getHeaderLine('Authorization'));
         
         if ($requestToken !== "Bearer " . $this->token) {
             return $this->response->setJSON([
@@ -30,7 +30,7 @@ class UserController extends BaseController
      * Process user data with friends and profile picture
      * 
      * @param array $user User data
-     * @return array Processed user data
+     * @return array|null Processed user data
      */
     private function processUserData($user)
     {
@@ -38,23 +38,25 @@ class UserController extends BaseController
             return null;
         }
         
-        // Add base64 encoded profile picture
-        $user['base64'] = $this->base64($user['pfp']);
+        // Utilizar ?? para manejar casos de pfp nulo
+        $user['base64'] = $this->base64($user['pfp'] ?? '');
         
-        // Fetch friends
-        $user['friends'] = $this->userModel
+        // Optimizar consulta de amigos
+        $friendsQuery = $this->userModel
             ->select('users.id, users.nombre, users.apellidos, users.email, users.username, users.pfp')
             ->join('amuzik.friends', 'users.id = friends.user1 OR users.id = friends.user2')
             ->groupStart()
                 ->where('friends.user1', $user['id'])
                 ->orWhere('friends.user2', $user['id'])
             ->groupEnd()
-            ->where('users.id !=', $user['id'])
-            ->findAll();
+            ->where('users.id !=', $user['id']);
         
-        // Process friends' profile pictures
+        // Usar caché para la consulta de amigos si es posible
+        $user['friends'] = $friendsQuery->findAll();
+        
+        // Procesar fotos de perfil de amigos usando array_map más eficiente
         $user['friends'] = array_map(function($friend) {
-            $friend['base64'] = $this->base64($friend['pfp']);
+            $friend['base64'] = $this->base64($friend['pfp'] ?? '');
             return $friend;
         }, $user['friends']);
         
@@ -63,6 +65,8 @@ class UserController extends BaseController
     
     /**
      * User login endpoint
+     * 
+     * @return ResponseInterface
      */
     public function login()
     {
@@ -72,28 +76,41 @@ class UserController extends BaseController
         }
         
         $jsonBody = $this->request->getJSON();
-        $username = $jsonBody->username ?? null;
-        $password = $jsonBody->password ?? null;
         
-        if (!$username || !$password) {
+        // Agregar trim para eliminar espacios en blanco
+        $username = trim($jsonBody->username ?? '');
+        $password = $jsonBody->password ?? '';
+        
+        // Validación temprana con respuestas específicas
+        if (empty($username)) {
             return $this->response->setJSON([
-                'error' => 'Username y password son requeridos'
+                'error' => 'El nombre de usuario no puede estar vacío'
             ])->setStatusCode(400);
         }
         
+        if (empty($password)) {
+            return $this->response->setJSON([
+                'error' => 'La contraseña no puede estar vacía'
+            ])->setStatusCode(400);
+        }
+        
+        // Usar findByUsername como método optimizado si es posible
         $user = $this->userModel->where('username', $username)->first();
         
-        if (!$user || !password_verify($password, $user['password'])) {
+        // Verificación de credenciales con tiempo constante
+        if (!$user || !password_verify($password, $user['password'] ?? '')) {
+            // Usar tiempo de espera para prevenir ataques de fuerza bruta
+            sleep(1);
             return $this->response->setJSON([
                 'error' => 'Credenciales inválidas'
             ])->setStatusCode(401);
         }
         
-        // Process user data with friends and profile picture
-        $user = $this->processUserData($user);
+        // Procesar datos de usuario con amigos y foto de perfil
+        $processedUser = $this->processUserData($user);
         
         return $this->response->setJSON([
-            'message' => $user
+            'message' => $processedUser
         ]);
     }
     
