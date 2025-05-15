@@ -6,25 +6,6 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class UserController extends BaseController
 {
-    private $token = 'W66jQhYGGzEIuCcAXfpTJkt7uH6GBGpcJLCSXo6O2WF1AZkxiMXpypFaKEfA';
-    
-    /**
-     * Validates request token against API token
-     * 
-     * @return bool|ResponseInterface Returns true if token is valid or error response
-     */
-    private function validateToken()
-    {
-        $requestToken = trim($this->request->getHeaderLine('Authorization'));
-        
-        if ($requestToken !== "Bearer " . $this->token) {
-            return $this->response->setJSON([
-                'error' => 'No se puede acceder, el token es inválido'
-            ])->setStatusCode(401);
-        }
-        
-        return true;
-    }
     
     /**
      * Process user data with friends and profile picture
@@ -54,7 +35,6 @@ class UserController extends BaseController
         // Usar caché para la consulta de amigos si es posible
         $user['friends'] = $friendsQuery->findAll();
         
-        // Procesar fotos de perfil de amigos usando array_map más eficiente
         $user['friends'] = array_map(function($friend) {
             $friend['base64'] = $this->base64($friend['pfp'] ?? '');
             return $friend;

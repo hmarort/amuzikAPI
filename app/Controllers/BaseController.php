@@ -57,6 +57,7 @@ abstract class BaseController extends Controller
         $this->filmModel = new \App\Models\FilmModel();
         $this->userModel = new \App\Models\UserModel();
         $this->friendModel = new \App\Models\FriendModel();
+        $this->token = env('JWT_SECRET');
         // E.g.: $this->session = \Config\Services::session();
     }
 
@@ -85,6 +86,24 @@ abstract class BaseController extends Controller
             $this->filmModel->transRollback();
         }
         return base64_encode('Imagen no disponible');
+    }
+
+    /**
+     * Validates request token against API token
+     * 
+     * @return bool|ResponseInterface Returns true if token is valid or error response
+     */
+    private function validateToken()
+    {
+        $requestToken = trim($this->request->getHeaderLine('Authorization'));
+        
+        if ($requestToken !== "Bearer " . $this->token) {
+            return $this->response->setJSON([
+                'error' => 'No se puede acceder, el token es inválido'
+            ])->setStatusCode(401);
+        }
+        
+        return true;
     }
 
 }
