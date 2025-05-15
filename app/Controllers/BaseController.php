@@ -92,7 +92,7 @@ abstract class BaseController extends Controller
      * 
      * @return bool|ResponseInterface Returns true if token is valid or error response
      */
-    private function validateToken()
+    public function validateToken()
     {
         $requestToken = trim($this->request->getHeaderLine('Authorization'));
         
