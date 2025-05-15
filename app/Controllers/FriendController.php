@@ -2,9 +2,7 @@
 namespace App\Controllers;
 use CodeIgniter\HTTP\ResponseInterface;
 class FriendController extends BaseController
-{
-    private $token = 'W66jQhYGGzEIuCcAXfpTJkt7uH6GBGpcJLCSXo6O2WF1AZkxiMXpypFaKEfA';
-    
+{    
     public function saveFriendship(){
         $jsonBody = $this->request->getJSON();
         if ($jsonBody) {
