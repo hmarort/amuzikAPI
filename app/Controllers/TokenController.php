@@ -1,15 +1,12 @@
 <?php
-
 namespace App\Controllers;
-
 use CodeIgniter\HTTP\ResponseInterface;
 
 class TokenController extends BaseController
 {
-    
     /**
      * Register a new mobile token for a user
-     * 
+     *
      * @return ResponseInterface
      */
     public function insertToken()
@@ -62,7 +59,6 @@ class TokenController extends BaseController
             
             // Verificar si ya existe un token para este usuario y actualizarlo
             $existingToken = $this->tokenModel->where('username', $username)->first();
-            
             if ($existingToken) {
                 // Actualizar el token existente
                 $data['id'] = $existingToken['id'];
@@ -73,8 +69,8 @@ class TokenController extends BaseController
                 $this->tokenModel->transCommit();
                 
                 // Determinar el mensaje según si fue actualización o inserción
-                $message = $existingToken 
-                    ? 'Token móvil actualizado correctamente' 
+                $message = $existingToken
+                    ? 'Token móvil actualizado correctamente'
                     : 'Token móvil registrado correctamente';
                     
                 return $this->response->setJSON([
@@ -87,11 +83,9 @@ class TokenController extends BaseController
                     'error' => implode(", ", $this->tokenModel->errors())
                 ])->setStatusCode(400);
             }
-            
         } catch (\Throwable $th) {
             $this->tokenModel->transRollback();
             log_message('error', $th->getMessage());
-            
             return $this->response->setJSON([
                 'error' => 'Error al procesar la solicitud: ' . $th->getMessage()
             ])->setStatusCode(500);
