@@ -68,8 +68,8 @@ abstract class BaseController extends Controller
     function base64($oid)
     {
         if (!empty($oid)) {
-            $this->filmModel->transBegin();
-            $handle = pg_lo_open($this->filmModel->connID, $oid, 'r');
+            $this->userModel->transBegin();
+            $handle = pg_lo_open($this->userModel->connID, $oid, 'r');
             if ($handle !== false) {
                 $data = '';
                 $chunkSize = 8192;
@@ -79,10 +79,10 @@ abstract class BaseController extends Controller
                 }
 
                 pg_lo_close($handle);
-                $this->filmModel->transCommit();
+                $this->userModel->transCommit();
                 return base64_encode($data);
             }
-            $this->filmModel->transRollback();
+            $this->userModel->transRollback();
         }
         return base64_encode('Imagen no disponible');
     }
