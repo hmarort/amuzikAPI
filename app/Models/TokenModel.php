@@ -9,7 +9,7 @@ class TokenModel extends Model
     protected $allowedFields = ["username", "token_movil"];
     
     protected $validationRules = [
-        'username' => 'required|exists[users.username]',
+        'username' => 'required',
         'token_movil' => 'required'
     ];
     
