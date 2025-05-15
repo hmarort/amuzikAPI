@@ -16,7 +16,6 @@ class TokenModel extends Model
     protected $validationMessages = [
         'username' => [
             'required' => 'El nombre de usuario es obligatorio.',
-            'exists' => 'El nombre de usuario no existe en la base de datos.'
         ],
         'token_movil' => [
             'required' => 'El token móvil es obligatorio.'
