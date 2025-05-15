@@ -54,7 +54,6 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-        $this->filmModel = new \App\Models\FilmModel();
         $this->userModel = new \App\Models\UserModel();
         $this->friendModel = new \App\Models\FriendModel();
         $this->token = env('JWT_SECRET');
