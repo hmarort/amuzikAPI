@@ -25,32 +25,32 @@ class Database extends Config
      * @var array<string, mixed>
      */
     public array $default = [
-        'DSN'          => '',
-        'schema'       => 'amuzik',
-        'hostname'     => 'ep-lingering-feather-a4ku41rc-pooler.us-east-1.aws.neon.tech',
-        'port'         => 5432,
-        'username'     => 'neondb_owner',
-        'password'     => 'npg_Zsa0Sevf8cuX',
-        'database'     => 'neondb',
-        'DBDriver'     => 'Postgre',
-        'DBPrefix'     => '',
-        'pConnect'     => false,
-        'DBDebug'      => true,
-        'charset'      => 'utf8',
-        'dbcollat'     => 'utf8_general_ci',
-        'swapPre'      => '',
-        'encrypt'      => true, // sslmode=require
-        'compress'     => false,
-        'strictOn'     => false,
-        'failover'     => [],
-        'numberNative' => false,
-        'save_queries' => true,
-        'dateFormat'   => [
-            'date'     => 'Y-m-d',
-            'datetime' => 'Y-m-d H:i:s',
-            'time'     => 'H:i:s',
-        ],
-    ];    
+    'DSN'          => '',
+    'schema'       => 'amuzik', // Puedes usar 'public' si no tienes uno personalizado.
+    'hostname'     => 'ep-noisy-forest-aby2qzbl-pooler.eu-west-2.aws.neon.tech',
+    'port'         => 5432,
+    'username'     => 'amuzik_owner',
+    'password'     => 'npg_hZHk6do7sgSQ',
+    'database'     => 'amuzik',
+    'DBDriver'     => 'Postgre',
+    'DBPrefix'     => '',
+    'pConnect'     => false,
+    'DBDebug'      => true,
+    'charset'      => 'utf8',
+    'dbcollat'     => 'utf8_general_ci',
+    'swapPre'      => '',
+    'encrypt'      => true, // Activa SSL
+    'compress'     => false,
+    'strictOn'     => false,
+    'failover'     => [],
+    'numberNative' => false,
+    'save_queries' => true,
+    'dateFormat'   => [
+        'date'     => 'Y-m-d',
+        'datetime' => 'Y-m-d H:i:s',
+        'time'     => 'H:i:s',
+    ],
+];    
     
 
     //    /**
