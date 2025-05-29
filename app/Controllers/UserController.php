@@ -137,7 +137,7 @@ class UserController extends BaseController
             return $tokenValidation;
         }
         
-        $userId = $this->request->getPost('id');
+        $userId = $this->request->getJson()->id??null;
         if (!$userId) {
             return $this->response->setJSON([
                 'error' => 'ID de usuario requerido'
