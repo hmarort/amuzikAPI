@@ -42,7 +42,7 @@ COPY . /var/www/html/
 # Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Instalar dependencias de Composer (si usas Composer)
+# Instalar dependencias de Composer
 RUN if [ -f "composer.json" ]; then composer install --no-interaction --optimize-autoloader; fi
 
 # Crear directorios writable con permisos adecuados
