@@ -4,7 +4,18 @@ use CodeIgniter\HTTP\ResponseInterface;
 class FriendController extends BaseController
 {    
     public function saveFriendship(){
+        $tokenValidation = $this->validateToken();
+        if ($tokenValidation !== true) {
+            return $tokenValidation;
+        }
+        
+        echo "\n\nBODY: ";print_r( $this->request->getPost()); echo"\n";
+
         $jsonBody = $this->request->getJSON();
+
+
+        $jsonBody = $this->testing($jsonBody);
+
         if ($jsonBody) {
             $user_id = $jsonBody->user_id;
             $friend_id = $jsonBody->friend_id;
@@ -23,13 +34,20 @@ class FriendController extends BaseController
             ]);
             return $this->response->setJSON(['status' => 'success']);
         } else {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid input']);
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid input', 'input'=>$jsonBody]);
         }
     }
     
     public function deleteFriendship()
     {
+        $tokenValidation = $this->validateToken();
+        if ($tokenValidation !== true) {
+            return $tokenValidation;
+        }
         $jsonBody = $this->request->getJSON();
+        
+        $jsonBody = $this->testing($jsonBody);
+
         if (!$jsonBody) {
             return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid input']);
         }

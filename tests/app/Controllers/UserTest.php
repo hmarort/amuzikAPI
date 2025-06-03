@@ -21,7 +21,7 @@ class UserTest extends BaseTestCase
             'password' => $faker->password()
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -59,7 +59,7 @@ class UserTest extends BaseTestCase
 
         // Escenario 2: Login con username vacío
         $post["username"] = "";
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para username vacío
@@ -79,7 +79,7 @@ class UserTest extends BaseTestCase
             'username' => $faker->userName(),
             'password' => ""
         ];
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "login", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para password vacío
@@ -105,7 +105,7 @@ class UserTest extends BaseTestCase
         $userId = $faker->numberBetween(1, 100);
         $_GET['id'] = $userId;
 
-        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo");
+        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -134,7 +134,7 @@ class UserTest extends BaseTestCase
 
         // Escenario 2: Sin proporcionar ID de usuario
         unset($_GET['id']);
-        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo");
+        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para falta de ID
@@ -161,7 +161,7 @@ class UserTest extends BaseTestCase
             'id' => $faker->numberBetween(1, 100)
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -193,7 +193,7 @@ class UserTest extends BaseTestCase
 
         // Escenario 2: Eliminación sin proporcionar ID
         $post = [];
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para falta de ID
@@ -226,7 +226,7 @@ class UserTest extends BaseTestCase
 
         $_FILES["pfp"] = $this->uploadTmp($faker);
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -267,7 +267,7 @@ class UserTest extends BaseTestCase
 
         $_FILES["pfp"] = $this->uploadTmp($faker);
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -298,7 +298,7 @@ class UserTest extends BaseTestCase
             // Faltan campos requeridos
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error para datos incompletos
@@ -321,8 +321,8 @@ class UserTest extends BaseTestCase
         $post = [
             'username' => $faker->userName()
         ];
-
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find");
+        print_r($post);
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -351,7 +351,7 @@ class UserTest extends BaseTestCase
 
         // Escenario 2: Búsqueda sin proporcionar username
         $post = [];
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para falta de username
@@ -370,7 +370,7 @@ class UserTest extends BaseTestCase
         $post = [
             'username' => ''
         ];
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para username vacío

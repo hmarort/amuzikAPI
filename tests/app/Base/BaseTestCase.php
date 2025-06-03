@@ -25,14 +25,15 @@ class BaseTestCase extends CIUnitTestCase
         $this->assertTrue(true);
     }
 
-    public function call_function_controller_type($type = "post", $array_request = array(), $controller = NULL, $function = "index")
+    public function call_function_controller_type($type = "post", $array_request = array(), $controller = NULL, $function = "index", $isJSON=false)
     {
-        $request = new \CodeIgniter\HTTP\IncomingRequest(
+         $request = new \CodeIgniter\HTTP\IncomingRequest(
             new \Config\App(),
             new \CodeIgniter\HTTP\SiteURI(new \Config\App()),
             null,
             new \CodeIgniter\HTTP\UserAgent()
         );
+        $request->setHeader('Authorization', 'Bearer ' . env('JWT_SECRET'));
         $request->setGlobal($type, $array_request);
         $request->setMethod($type);
 

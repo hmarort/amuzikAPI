@@ -165,12 +165,12 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
-        'schema'       => 'videoclub',
-        'hostname'     => '89.128.117.9',
+        'schema'       => 'amuzik', // Puedes usar 'public' si no tienes uno personalizado.
+        'hostname'     => 'ep-noisy-forest-aby2qzbl-pooler.eu-west-2.aws.neon.tech',
         'port'         => 5432,
-        'username'     => 'test',
-        'password'     => 'pp7856Mh',
-        'database'     => 'test',
+        'username'     => 'amuzik_owner',
+        'password'     => 'npg_hZHk6do7sgSQ',
+        'database'     => 'amuzik',
         'DBDriver'     => 'Postgre',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -178,7 +178,7 @@ class Database extends Config
         'charset'      => 'utf8',
         'dbcollat'     => 'utf8_general_ci',
         'swapPre'      => '',
-        'encrypt'      => false,
+        'encrypt'      => true, // Activa SSL
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
@@ -189,7 +189,7 @@ class Database extends Config
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
-    ];
+    ]; 
 
     public function __construct()
     {

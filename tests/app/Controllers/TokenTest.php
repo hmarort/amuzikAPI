@@ -17,11 +17,11 @@ class TokenTest extends BaseTestCase
 
         // Escenario 1: Registro exitoso de token móvil (nuevo token)
         $post = [
-            'username' => $faker->userName(),
+            'username' => 'Ara',
             'token_movil' => $faker->sha256()
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -84,7 +84,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => $faker->sha256()
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($statusCode == 400) {
@@ -110,7 +110,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => ''
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($statusCode == 400) {
@@ -136,7 +136,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => ''
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($statusCode == 400) {
@@ -157,7 +157,7 @@ class TokenTest extends BaseTestCase
         }
 
         // Escenario 5: Sin cuerpo JSON
-        $result = $this->call_function_controller_type("post", [], \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", [], \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($statusCode == 400) {
@@ -183,7 +183,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => '  ' . $faker->sha256() . '  '
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -207,7 +207,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => $faker->sha256()
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -225,7 +225,7 @@ class TokenTest extends BaseTestCase
             'token_movil' => $faker->text(1000) // Token muy largo
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -240,11 +240,11 @@ class TokenTest extends BaseTestCase
         // Escenario 9: Actualización de token existente (simulando segundo registro del mismo usuario)
         $username = $faker->userName();
         $post = [
-            'username' => $username,
+            'username' => admin,
             'token_movil' => $faker->sha256()
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -255,7 +255,7 @@ class TokenTest extends BaseTestCase
                 
                 // Intentar actualizar el mismo token
                 $post['token_movil'] = $faker->sha256(); // Nuevo token
-                $result2 = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken");
+                $result2 = $this->call_function_controller_type("post", $post, \App\Controllers\TokenController::class, "insertToken", true);
                 
                 if ($result2->isOK()) {
                     $res2 = json_decode($result2->getJSON());

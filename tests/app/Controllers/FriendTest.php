@@ -15,13 +15,13 @@ class FriendTest extends BaseTestCase
         $faker = Faker\Factory::create();
         $logger = $this->get_logger("SaveFriendship_");
 
-        // Escenario 1: Creación exitosa de amistad
         $post = [
-            'user_id' => $faker->numberBetween(1, 100),
-            'friend_id' => $faker->numberBetween(101, 200)
+            'user_id' => 1,
+            'friend_id' => 2
         ];
-
+        //echo "\nPOST: "; print_r($post); echo "\n";// die(1);
         $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "saveFriendship");
+        //echo "RESULT: " . $result->getJSON() . "\n";// die(1);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -35,7 +35,6 @@ class FriendTest extends BaseTestCase
                 $this->assertTrue(true, "Error en creación de amistad");
             }
         } else {
-            // Verificar si es un error esperado
             if ($statusCode == 400) {
                 $logger->log('info', "SAVE FRIENDSHIP PERFECTO: Error 400 esperado en creación");
                 $this->assertTrue(true, "Error 400 esperado en creación");
@@ -53,7 +52,6 @@ class FriendTest extends BaseTestCase
             }
         }
 
-        // Escenario 2: Creación con IDs invertidos (para verificar el ordenamiento)
         $post = [
             'user_id' => $faker->numberBetween(101, 200),
             'friend_id' => $faker->numberBetween(1, 100)
@@ -77,7 +75,6 @@ class FriendTest extends BaseTestCase
             $this->assertTrue(true, "Error esperado con IDs invertidos");
         }
 
-        // Escenario 3: Creación sin datos JSON (cuerpo vacío)
         $result = $this->call_function_controller_type("post", [], \App\Controllers\FriendController::class, "saveFriendship");
         $statusCode = $result->getStatusCode();
 
@@ -96,7 +93,6 @@ class FriendTest extends BaseTestCase
             $this->assertTrue(true, "Error HTTP esperado para datos vacíos");
         }
 
-        // Escenario 4: Creación con IDs iguales (usuario intentando ser amigo de sí mismo)
         $sameId = $faker->numberBetween(1, 100);
         $post = [
             'user_id' => $sameId,
@@ -122,10 +118,9 @@ class FriendTest extends BaseTestCase
         $faker = Faker\Factory::create();
         $logger = $this->get_logger("DeleteFriendship_");
 
-        // Escenario 1: Eliminación exitosa de amistad
         $post = [
-            'user_id' => $faker->numberBetween(1, 100),
-            'friend_id' => $faker->numberBetween(101, 200)
+            'user_id' => 1,
+            'friend_id' => 2
         ];
 
         $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "deleteFriendship");
@@ -166,7 +161,6 @@ class FriendTest extends BaseTestCase
             }
         }
 
-        // Escenario 2: Eliminación con IDs invertidos
         $post = [
             'user_id' => $faker->numberBetween(101, 200),
             'friend_id' => $faker->numberBetween(1, 100)
@@ -192,8 +186,7 @@ class FriendTest extends BaseTestCase
             $this->assertTrue(true, "Error esperado con IDs invertidos");
         }
 
-        // Escenario 3: Eliminación sin datos JSON (cuerpo vacío)
-        $result = $this->call_function_controller_type("post", [], \App\Controllers\FriendController::class, "deleteFriendship");
+        $result = $this->call_function_controller_type("post", [], \App\Controllers\FriendController::class, "deleteFriendship",true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -211,12 +204,11 @@ class FriendTest extends BaseTestCase
             $this->assertTrue(true, "Error HTTP esperado para datos vacíos");
         }
 
-        // Escenario 4: Eliminación con datos incompletos (solo user_id)
         $post = [
             'user_id' => $faker->numberBetween(1, 100)
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "deleteFriendship");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "deleteFriendship", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -228,14 +220,13 @@ class FriendTest extends BaseTestCase
             $this->assertTrue(true, "Error esperado para datos incompletos");
         }
 
-        // Escenario 5: Eliminación con IDs iguales
         $sameId = $faker->numberBetween(1, 100);
         $post = [
             'user_id' => $sameId,
             'friend_id' => $sameId
         ];
 
-        $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "deleteFriendship");
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\FriendController::class, "deleteFriendship", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {

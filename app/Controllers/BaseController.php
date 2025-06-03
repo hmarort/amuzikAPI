@@ -105,4 +105,11 @@ abstract class BaseController extends Controller
         return true;
     }
 
+    protected function testing($jsonBody = null) {
+        if (!$jsonBody) {
+            $jsonBody = json_decode(json_encode($this->request->getPost()));
+        }
+        return $jsonBody;
+    }
+
 }

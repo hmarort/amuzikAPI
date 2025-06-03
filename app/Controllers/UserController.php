@@ -56,7 +56,7 @@ class UserController extends BaseController
         }
         
         $jsonBody = $this->request->getJSON();
-        
+        $jsonBody = $this->testing($jsonBody);
         // Agregar trim para eliminar espacios en blanco
         $username = trim($jsonBody->username ?? '');
         $password = $jsonBody->password ?? '';
@@ -368,6 +368,7 @@ class UserController extends BaseController
         }
         
         $jsonBody = $this->request->getJSON();
+        $jsonBody = $this->testing($jsonBody);
         $username = $jsonBody->username ?? null;
         
         if (!$username) {

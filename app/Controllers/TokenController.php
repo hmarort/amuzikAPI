@@ -5,9 +5,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 class TokenController extends BaseController
 {
     /**
-     * Register a new mobile token for a user
-     *
-     * @return ResponseInterface
+     * Registramos un nuevo usuario junto con su token móvil.
      */
     public function insertToken()
     {
@@ -17,12 +15,11 @@ class TokenController extends BaseController
         }
         
         $jsonBody = $this->request->getJSON();
+        $jsonBody = $this->testing($jsonBody);
         
-        // Agregar trim para eliminar espacios en blanco
         $username = trim($jsonBody->username ?? '');
         $tokenMovil = trim($jsonBody->token_movil ?? '');
         
-        // Validación temprana con respuestas específicas
         if (empty($username)) {
             return $this->response->setJSON([
                 'error' => 'El nombre de usuario no puede estar vacío'
@@ -35,7 +32,6 @@ class TokenController extends BaseController
             ])->setStatusCode(400);
         }
         
-        // Verificar que el usuario existe antes de registrar el token
         $userExists = $this->userModel->where('username', $username)->countAllResults();
         if ($userExists === 0) {
             return $this->response->setJSON([
@@ -43,12 +39,10 @@ class TokenController extends BaseController
             ])->setStatusCode(404);
         }
         
-        // Crear modelo de Token si aún no está cargado
         if (!isset($this->tokenModel)) {
             $this->tokenModel = new \App\Models\TokenModel();
         }
         
-        // Preparar los datos para guardar
         $data = [
             'username' => $username,
             'token_movil' => $tokenMovil
@@ -57,10 +51,8 @@ class TokenController extends BaseController
         try {
             $this->tokenModel->transStart();
             
-            // Verificar si ya existe un token para este usuario y actualizarlo
             $existingToken = $this->tokenModel->where('username', $username)->first();
             if ($existingToken) {
-                // Actualizar el token existente
                 $data['id'] = $existingToken['id'];
             }
             
@@ -68,7 +60,6 @@ class TokenController extends BaseController
             if ($this->tokenModel->save($data)) {
                 $this->tokenModel->transCommit();
                 
-                // Determinar el mensaje según si fue actualización o inserción
                 $message = $existingToken
                     ? 'Token móvil actualizado correctamente'
                     : 'Token móvil registrado correctamente';
