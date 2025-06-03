@@ -165,7 +165,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
-        'schema'       => 'amuzik', // Puedes usar 'public' si no tienes uno personalizado.
+        'schema'       => 'tests', // Puedes usar 'public' si no tienes uno personalizado.
         'hostname'     => 'ep-noisy-forest-aby2qzbl-pooler.eu-west-2.aws.neon.tech',
         'port'         => 5432,
         'username'     => 'amuzik_owner',
