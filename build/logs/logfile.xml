@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/var/www/html/_/phpunit.xml" tests="12" assertions="29" errors="3" failures="0" skipped="0" time="3.689946">
+    <testsuite name="amuzik" tests="12" assertions="29" errors="3" failures="0" skipped="0" time="3.689946">
+      <testsuite name="App\Base\BaseTestCase" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.080452">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Base\BaseTestCase" classname="App.Base.BaseTestCase" assertions="1" time="0.080452"/>
+      </testsuite>
+      <testsuite name="App\Controllers\FriendTest" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" tests="3" assertions="5" errors="2" failures="0" skipped="0" time="0.790338">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="1" time="0.006407"/>
+        <testcase name="testSaveFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="13" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="1" time="0.540514">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">App\Controllers\FriendTest::testSaveFriendship
+CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  insert or update on table "friends" violates foreign key constraint "friends_user1_fkey"
+DETAIL:  Key (user1)=(47) is not present in table "users".
+
+/var/www/html/_/system/Database/BaseConnection.php:692
+/var/www/html/_/system/Database/BaseBuilder.php:2345
+/var/www/html/_/system/Model.php:394
+/var/www/html/_/system/BaseModel.php:839
+/var/www/html/_/system/Model.php:800
+/var/www/html/_/system/BaseModel.php:750
+/var/www/html/_/app/Controllers/FriendController.php:31
+/var/www/html/_/system/Test/ControllerTestTrait.php:166
+/var/www/html/_/tests/app/Base/BaseTestCase.php:40
+/var/www/html/_/tests/app/Controllers/FriendTest.php:60</error>
+        </testcase>
+        <testcase name="testDeleteFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="116" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="3" time="0.243417">
+          <error type="ErrorException">App\Controllers\FriendTest::testDeleteFriendship
+ErrorException: Undefined property: stdClass::$friend_id
+
+/var/www/html/_/app/Controllers/FriendController.php:56
+/var/www/html/_/system/Test/ControllerTestTrait.php:166
+/var/www/html/_/tests/app/Base/BaseTestCase.php:40
+/var/www/html/_/tests/app/Controllers/FriendTest.php:211</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="App\Controllers\TokenTest" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" tests="2" assertions="9" errors="1" failures="0" skipped="0" time="0.412820">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="1" time="0.004814"/>
+        <testcase name="testInsertToken" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" line="13" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="8" time="0.408006">
+          <error type="Error">App\Controllers\TokenTest::testInsertToken
+Error: Undefined constant "App\Controllers\admin"
+
+/var/www/html/_/tests/app/Controllers/TokenTest.php:243</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="App\Controllers\UserTest" file="/var/www/html/_/tests/app/Controllers/UserTest.php" tests="6" assertions="14" errors="0" failures="0" skipped="0" time="2.406336">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="1" time="0.004757"/>
+        <testcase name="testLogin" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="13" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="3" time="1.090299"/>
+        <testcase name="testUserInfo" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="99" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="2" time="0.008927"/>
+        <testcase name="testDeleteUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="154" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="2" time="0.011179"/>
+        <testcase name="testSaveUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="213" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="3" time="1.237177"/>
+        <testcase name="testFind" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="315" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="3" time="0.053998">
+          <system-out>Array
+(
+    [username] =&gt; nyasia07
+)
+</system-out>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
