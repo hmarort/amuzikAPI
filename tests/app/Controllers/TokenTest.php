@@ -240,7 +240,7 @@ class TokenTest extends BaseTestCase
         // Escenario 9: Actualización de token existente (simulando segundo registro del mismo usuario)
         $username = $faker->userName();
         $post = [
-            'username' => admin,
+            'username' => 'admin',
             'token_movil' => $faker->sha256()
         ];
 

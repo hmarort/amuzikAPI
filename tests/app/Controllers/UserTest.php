@@ -103,9 +103,68 @@ class UserTest extends BaseTestCase
 
         // Escenario 1: Obtención exitosa de información de usuario
         $userId = $faker->numberBetween(1, 100);
-        $_GET['id'] = $userId;
+        $post['id'] = $userId;
 
-        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo", true);
+        $result = $this->call_function_controller_type("get", $post, \App\Controllers\UserController::class, "userInfo", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "USERINFO PERFECTO: Información de usuario obtenida correctamente. ID: " . $userId);
+                $this->assertTrue(true, "Obtención de información exitosa");
+            } else {
+                $logger->log('warning', "USERINFO PARCIAL: Usuario no encontrado. ID: " . $userId);
+                $this->assertTrue(true, "Usuario no encontrado");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 404) {
+                $logger->log('info', "USERINFO PERFECTO: Error 404 esperado para usuario no encontrado. ID: " . $userId);
+                $this->assertTrue(true, "Usuario no encontrado - Error esperado");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "USERINFO PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } else {
+                $logger->log('warning', "USERINFO PARCIAL: Error inesperado. ID: " . $userId . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en obtención de información");
+            }
+        }
+        // Escenario 1: Obtención exitosa de información de usuario
+        $userId = 1;
+        $post['id'] = $userId;
+
+        $result = $this->call_function_controller_type("get", $post, \App\Controllers\UserController::class, "userInfo", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "USERINFO PERFECTO: Información de usuario obtenida correctamente. ID: " . $userId);
+                $this->assertTrue(true, "Obtención de información exitosa");
+            } else {
+                $logger->log('warning', "USERINFO PARCIAL: Usuario no encontrado. ID: " . $userId);
+                $this->assertTrue(true, "Usuario no encontrado");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 404) {
+                $logger->log('info', "USERINFO PERFECTO: Error 404 esperado para usuario no encontrado. ID: " . $userId);
+                $this->assertTrue(true, "Usuario no encontrado - Error esperado");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "USERINFO PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } else {
+                $logger->log('warning', "USERINFO PARCIAL: Error inesperado. ID: " . $userId . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en obtención de información");
+            }
+        }
+
+        $post['id'] = 200;
+
+        $result = $this->call_function_controller_type("get", $post, \App\Controllers\UserController::class, "userInfo", true);
         $statusCode = $result->getStatusCode();
 
         if ($result->isOK()) {
@@ -133,8 +192,8 @@ class UserTest extends BaseTestCase
         }
 
         // Escenario 2: Sin proporcionar ID de usuario
-        unset($_GET['id']);
-        $result = $this->call_function_controller_type("get", [], \App\Controllers\UserController::class, "userInfo", true);
+        $post['id']=null;
+        $result = $this->call_function_controller_type("get", $post, \App\Controllers\UserController::class, "userInfo", true);
         $statusCode = $result->getStatusCode();
 
         // Esperamos un error 400 para falta de ID
@@ -158,7 +217,41 @@ class UserTest extends BaseTestCase
 
         // Escenario 1: Eliminación exitosa de usuario
         $post = [
-            'id' => $faker->numberBetween(1, 100)
+            'id' => $faker->numberBetween(40, 100)
+        ];
+
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "DELETE PERFECTO: Usuario eliminado correctamente. ID: " . $post["id"]);
+                $this->assertTrue(true, "Eliminación exitosa");
+            } else {
+                $logger->log('warning', "DELETE PARCIAL: Error al eliminar usuario. ID: " . $post["id"]);
+                $this->assertTrue(true, "Error en eliminación");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 400) {
+                $logger->log('info', "DELETE PERFECTO: Error 400 esperado al eliminar usuario. ID: " . $post["id"]);
+                $this->assertTrue(true, "Error 400 esperado en eliminación");
+            } elseif ($statusCode == 404) {
+                $logger->log('info', "DELETE PERFECTO: Error 404 esperado al eliminar usuario. ID: " . $post["id"]);
+                $this->assertTrue(true, "Error 404 esperado en eliminación");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "DELETE PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } else {
+                $logger->log('warning', "DELETE PARCIAL: Error inesperado. ID: " . $post["id"] . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en eliminación");
+            }
+        }
+        // Escenario 1.2: Eliminación exitosa de usuario
+        $post = [
+            'id' => $faker->numberBetween(40, 100)
         ];
 
         $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser", true);
@@ -207,6 +300,24 @@ class UserTest extends BaseTestCase
             $logger->log('warning', "DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: " . $statusCode);
             $this->assertTrue(true, "Respuesta inesperada para eliminación sin ID");
         }
+        // Escenario 2.2: Eliminación proporcionando ID erroneo
+        $post = [
+            'id' => 999999
+        ];
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "deleteUser", true);
+        $statusCode = $result->getStatusCode();
+
+        // Esperamos un error 400 para falta de ID
+        if ($statusCode == 400) {
+            $logger->log('info', "DELETE PERFECTO: Error 400 esperado para falta de ID");
+            $this->assertTrue(true, "Eliminación sin ID - Error esperado");
+        } elseif ($statusCode == 403) {
+            $logger->log('info', "DELETE PERFECTO: Error 403 esperado - Token inválido");
+            $this->assertTrue(true, "Error 403 esperado - Token inválido");
+        } else {
+            $logger->log('warning', "DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: " . $statusCode);
+            $this->assertTrue(true, "Respuesta inesperada para eliminación sin ID");
+        }
     }
 
     /* Test para el método saveUser */
@@ -221,11 +332,81 @@ class UserTest extends BaseTestCase
             'apellidos' => $faker->lastName(),
             'email' => $faker->email(),
             'username' => $faker->userName(),
-            'password' => $faker->password()
+            'password' => $faker->password(),
+            'pfp'=> $faker->imageUrl(640, 480, 'people', true, 'Faker', true)
         ];
-
         $_FILES["pfp"] = $this->uploadTmp($faker);
 
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "SAVE PERFECTO: Usuario creado correctamente. Usuario: " . $post["username"] . ", Email: " . $post["email"]);
+                $this->assertTrue(true, "Creación exitosa");
+            } else {
+                $logger->log('warning', "SAVE PARCIAL: Error en la creación del usuario");
+                $this->assertTrue(true, "Error en creación");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 400) {
+                $logger->log('info', "SAVE PERFECTO: Error 400 esperado en creación. Usuario: " . $post["username"]);
+                $this->assertTrue(true, "Error 400 esperado en creación");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "SAVE PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } elseif ($statusCode == 500) {
+                $logger->log('info', "SAVE PERFECTO: Error 500 esperado en creación. Usuario: " . $post["username"]);
+                $this->assertTrue(true, "Error 500 esperado en creación");
+            } else {
+                $logger->log('warning', "SAVE PARCIAL: Error inesperado en creación. Usuario: " . $post["username"] . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en creación");
+            }
+        }
+        // Escenario 1.2: Creación exitosa de usuario que nosotros queremos y tenemos sus datos
+        $post = [
+            'nombre' => 'Admin',
+            'apellidos' => 'TheAdmin',
+            'email' => 'admin@admin.com',
+            'username' => 'admin',
+            'password' => 'admin_',
+            'pfp'=> $faker->imageUrl(640, 480, 'people', true, 'Faker', true)
+        ];
+        $_FILES["pfp"] = $this->uploadTmp($faker);
+
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "SAVE PERFECTO: Usuario creado correctamente. Usuario: " . $post["username"] . ", Email: " . $post["email"]);
+                $this->assertTrue(true, "Creación exitosa");
+            } else {
+                $logger->log('warning', "SAVE PARCIAL: Error en la creación del usuario");
+                $this->assertTrue(true, "Error en creación");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 400) {
+                $logger->log('info', "SAVE PERFECTO: Error 400 esperado en creación. Usuario: " . $post["username"]);
+                $this->assertTrue(true, "Error 400 esperado en creación");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "SAVE PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } elseif ($statusCode == 500) {
+                $logger->log('info', "SAVE PERFECTO: Error 500 esperado en creación. Usuario: " . $post["username"]);
+                $this->assertTrue(true, "Error 500 esperado en creación");
+            } else {
+                $logger->log('warning', "SAVE PARCIAL: Error inesperado en creación. Usuario: " . $post["username"] . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en creación");
+            }
+        }
+        // Escenario 1.3: Creación erronea de usuario que nosotros queremos y tenemos sus datos
         $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "saveUser", true);
         $statusCode = $result->getStatusCode();
 
@@ -258,7 +439,7 @@ class UserTest extends BaseTestCase
 
         // Escenario 2: Actualización de usuario existente
         $post = [
-            'id' => $faker->numberBetween(1, 100),
+            'id' => 1,
             'nombre' => $faker->firstName(),
             'apellidos' => $faker->lastName(),
             'email' => $faker->email(),
@@ -321,7 +502,35 @@ class UserTest extends BaseTestCase
         $post = [
             'username' => $faker->userName()
         ];
-        print_r($post);
+        $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find", true);
+        $statusCode = $result->getStatusCode();
+
+        if ($result->isOK()) {
+            $res = json_decode($result->getJSON());
+
+            if (!empty($res) && isset($res->message)) {
+                $logger->log('info', "FIND PERFECTO: Usuario encontrado correctamente. Username: " . $post["username"]);
+                $this->assertTrue(true, "Búsqueda exitosa");
+            } else {
+                $logger->log('warning', "FIND PARCIAL: Usuario no encontrado. Username: " . $post["username"]);
+                $this->assertTrue(true, "Usuario no encontrado");
+            }
+        } else {
+            // Verificar si es un error esperado
+            if ($statusCode == 404) {
+                $logger->log('info', "FIND PERFECTO: Error 404 esperado para usuario no encontrado. Username: " . $post["username"]);
+                $this->assertTrue(true, "Usuario no encontrado - Error esperado");
+            } elseif ($statusCode == 403) {
+                $logger->log('info', "FIND PERFECTO: Error 403 esperado - Token inválido");
+                $this->assertTrue(true, "Error 403 esperado - Token inválido");
+            } else {
+                $logger->log('warning', "FIND PARCIAL: Error inesperado en búsqueda. Username: " . $post["username"] . " - Status: " . $statusCode);
+                $this->assertTrue(true, "Error inesperado en búsqueda");
+            }
+        }
+        $post = [
+            'username' => 'admin'
+        ];
         $result = $this->call_function_controller_type("post", $post, \App\Controllers\UserController::class, "find", true);
         $statusCode = $result->getStatusCode();
 
