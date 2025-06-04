@@ -63,36 +63,40 @@ class BaseTestCase extends CIUnitTestCase
 
     protected function subir_archivos($faker, $controller, $function)
     {
-        $tmp_file = tempnam(WRITEPATH . "/tmp", "tmp_");
+        $unique_name = "tmp_" . time() . "_" . mt_rand(1000, 9999);
+        $tmp_file = WRITEPATH . "/tmp/" . $unique_name;
+        
         file_put_contents($tmp_file, $faker->paragraphs());
-
-
-
-        $_FILES['upload'] =
-            [
-                'name' => $faker->word() . "." . $faker->fileExtension(),
-                'type' => $faker->mimeType(),
-                'tmp_name' => $tmp_file,
-                'error' => 0,
-                'size' => filesize($tmp_file)
-            ];
-        $all_post["action"] = "upload";
-        $result = $this->call_function_controller_type("post", $all_post, $controller, $function);
-        $res = json_decode($result->getJSON());
-        return array($res, $_FILES['upload']["name"]);
-    }
-
-    /* Version priopia del subir archivos */
-    protected function uploadTmp($faker){
-        $tmp_file=tempnam(WRITEPATH,"tmp_");
-        file_put_contents($tmp_file, $faker->paragraphs());
-       
-        return [
-            'name' => $faker->word() . "." . $faker->randomElement(["jpg","png"]),
+        
+        $_FILES['upload'] = [
+            'name' => $faker->word() . "." . $faker->fileExtension(),
             'type' => $faker->mimeType(),
             'tmp_name' => $tmp_file,
             'error' => 0,
             'size' => filesize($tmp_file)
-        ];  
+        ];
+        
+        $all_post["action"] = "upload";
+        $result = $this->call_function_controller_type("post", $all_post, $controller, $function);
+        $res = json_decode($result->getJSON());
+        
+        return array($res, $_FILES['upload']["name"]);
+    }
+
+    /* Version propia del subir archivos */
+    protected function uploadTmp($faker)
+    {
+        $unique_name = "tmp_" . time() . "_" . mt_rand(1000, 9999);
+        $tmp_file = WRITEPATH . "/tmp/" . $unique_name;
+        
+        file_put_contents($tmp_file, $faker->paragraphs());
+        
+        return [
+            'name' => $faker->word() . "." . $faker->randomElement(["jpg", "png"]),
+            'type' => $faker->mimeType(),
+            'tmp_name' => $tmp_file,
+            'error' => 0,
+            'size' => filesize($tmp_file)
+        ];
     } 
 }
