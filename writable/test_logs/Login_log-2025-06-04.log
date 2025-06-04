@@ -28,3 +28,15 @@ ERROR - 2025-06-04 11:08:44 --> Respuesta del servidor: {
 }
 WARNING - 2025-06-04 11:08:44 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
 WARNING - 2025-06-04 11:08:44 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 11:29:00 --> ERROR EN LOGIN: Código de estado inesperado para legros.antonina - Status: 
+ERROR - 2025-06-04 11:29:00 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 11:29:00 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:29:00 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 11:31:03 --> ERROR EN LOGIN: Código de estado inesperado para otoy - Status: 
+ERROR - 2025-06-04 11:31:03 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 11:31:03 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:31:03 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 

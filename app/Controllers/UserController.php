@@ -8,7 +8,10 @@ class UserController extends BaseController
 {
     
     /**
-     * Procesa los datos del usuario, incluyendo amigos y foto
+     * Process user data with friends and profile picture
+     * 
+     * @param array $user User data
+     * @return array|null Processed user data
      */
     private function processUserData($user)
     {
@@ -16,63 +19,34 @@ class UserController extends BaseController
             return null;
         }
         
-        // Verificar si pfp es válido antes de procesar
-        if (!empty($user['pfp']) && is_numeric($user['pfp'])) {
-            try {
-                $user['base64'] = $this->base64($user['pfp']);
-            } catch (\Exception $e) {
-                // Si hay error al procesar la imagen, usar cadena vacía
-                $user['base64'] = '';
-                log_message('warning', 'Error al procesar imagen de perfil: ' . $e->getMessage());
-            }
-        } else {
-            $user['base64'] = '';
-        }
+        // Utilizar ?? para manejar casos de pfp nulo
+        $user['base64'] = $this->base64($user['pfp'] ?? '');
         
-        // Inicializar friends como array vacío por defecto
-        $user['friends'] = [];
+        // Optimizar consulta de amigos
+        $friendsQuery = $this->userModel
+            ->select('users.id, users.nombre, users.apellidos, users.email, users.username, users.pfp')
+            ->join('amuzik.friends', 'users.id = friends.user1 OR users.id = friends.user2')
+            ->groupStart()
+                ->where('friends.user1', $user['id'])
+                ->orWhere('friends.user2', $user['id'])
+            ->groupEnd()
+            ->where('users.id !=', $user['id']);
         
-        try {
-            // Verificar que el modelo y la conexión estén disponibles
-            if ($this->userModel && $this->userModel->db->connID) {
-                // Optimizar consulta de amigos
-                $friendsQuery = $this->userModel
-                    ->select('users.id, users.nombre, users.apellidos, users.email, users.username, users.pfp')
-                    ->join('amuzik.friends', 'users.id = friends.user1 OR users.id = friends.user2', 'left')
-                    ->groupStart()
-                        ->where('friends.user1', $user['id'])
-                        ->orWhere('friends.user2', $user['id'])
-                    ->groupEnd()
-                    ->where('users.id !=', $user['id']);
-                
-                $friends = $friendsQuery->findAll();
-                
-                if ($friends) {
-                    $user['friends'] = array_map(function($friend) {
-                        if (!empty($friend['pfp']) && is_numeric($friend['pfp'])) {
-                            try {
-                                $friend['base64'] = $this->base64($friend['pfp']);
-                            } catch (\Exception $e) {
-                                $friend['base64'] = '';
-                                log_message('warning', 'Error al procesar imagen de amigo: ' . $e->getMessage());
-                            }
-                        } else {
-                            $friend['base64'] = '';
-                        }
-                        return $friend;
-                    }, $friends);
-                }
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Error al obtener amigos: ' . $e->getMessage());
-            // Mantener friends como array vacío si hay error
-        }
+        // Usar caché para la consulta de amigos si es posible
+        $user['friends'] = $friendsQuery->findAll();
+        
+        $user['friends'] = array_map(function($friend) {
+            $friend['base64'] = $this->base64($friend['pfp'] ?? '');
+            return $friend;
+        }, $user['friends']);
         
         return $user;
     }
     
     /**
-     * Login de los usuarios
+     * User login endpoint
+     * 
+     * @return ResponseInterface
      */
     public function login()
     {
@@ -83,11 +57,11 @@ class UserController extends BaseController
         
         $jsonBody = $this->request->getJSON();
         $jsonBody = $this->testing($jsonBody);
-        
         // Agregar trim para eliminar espacios en blanco
         $username = trim($jsonBody->username ?? '');
         $password = $jsonBody->password ?? '';
         
+        // Validación temprana con respuestas específicas
         if (empty($username)) {
             return $this->response->setJSON([
                 'error' => 'El nombre de usuario no puede estar vacío'
@@ -100,35 +74,28 @@ class UserController extends BaseController
             ])->setStatusCode(400);
         }
         
-        try {
-            $user = $this->userModel->where('username', $username)->first();
-            
-            // Verificación de credenciales con tiempo constante
-            if (!$user || !password_verify($password, $user['password'] ?? '')) {
-                if (ENVIRONMENT !== 'testing') {
-                    sleep(1);
-                }
-                return $this->response->setJSON([
-                    'error' => 'Credenciales inválidas'
-                ])->setStatusCode(401);
-            }
-            
-            // Procesar datos de usuario con amigos y foto de perfil
-            $processedUser = $this->processUserData($user);
-            
+        // Usar findByUsername como método optimizado si es posible
+        $user = $this->userModel->where('username', $username)->first();
+        
+        // Verificación de credenciales con tiempo constante
+        if (!$user || !password_verify($password, $user['password'] ?? '')) {
+            // Usar tiempo de espera para prevenir ataques de fuerza bruta
+            sleep(1);
             return $this->response->setJSON([
-                'message' => $processedUser
-            ]);
-        } catch (\Exception $e) {
-            log_message('error', 'Error en login: ' . $e->getMessage());
-            return $this->response->setJSON([
-                'error' => 'Error interno del servidor'
-            ])->setStatusCode(500);
+                'error' => 'Credenciales inválidas'
+            ])->setStatusCode(401);
         }
+        
+        // Procesar datos de usuario con amigos y foto de perfil
+        $processedUser = $this->processUserData($user);
+        
+        return $this->response->setJSON([
+            'message' => $processedUser
+        ]);
     }
     
     /**
-     * Obtener usuario por ID
+     * Get user info by ID
      */
     public function userInfo()
     {
@@ -136,7 +103,6 @@ class UserController extends BaseController
         if ($tokenValidation !== true) {
             return $tokenValidation;
         }
-        
         $userId = $this->request->getGet('id');
         if (!$userId) {
             return $this->response->setJSON([
@@ -144,30 +110,24 @@ class UserController extends BaseController
             ])->setStatusCode(400);
         }
         
-        try {
-            $user = $this->userModel->find($userId);
+        $user = $this->userModel->find($userId);
+        
+        if ($user) {
+            // Process user data with friends and profile picture
+            $user = $this->processUserData($user);
             
-            if ($user) {
-                $user = $this->processUserData($user);
-                
-                return $this->response->setJSON([
-                    'message' => $user
-                ]);
-            } else {
-                return $this->response->setJSON([
-                    'error' => 'Usuario no encontrado'
-                ])->setStatusCode(404);
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Error en userInfo: ' . $e->getMessage());
             return $this->response->setJSON([
-                'error' => 'Error interno del servidor'
-            ])->setStatusCode(500);
+                'message' => $user
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'error' => 'Usuario no encontrado'
+            ])->setStatusCode(404);
         }
     }
     
     /**
-     * Eliminar un usuario
+     * Delete a user
      */
     public function deleteUser()
     {
@@ -176,37 +136,30 @@ class UserController extends BaseController
             return $tokenValidation;
         }
         
-        $userId = $this->request->getJson()->id ?? null;
+        $userId = $this->request->getJson()->id??null;
 
-        if( empty($userId) ) {
+        if(empty($userId)) {
             $userId = $this->testing($userId)->id??null;
         }
-
         if (!$userId) {
             return $this->response->setJSON([
                 'error' => 'ID de usuario requerido'
             ])->setStatusCode(400);
         }
-        try {
-            if ($this->userModel->delete($userId)) {
-                return $this->response->setJSON([
-                    'message' => 'Usuario eliminado correctamente'
-                ]);
-            } else {
-                return $this->response->setJSON([
-                    'error' => 'Error al eliminar el usuario'
-                ])->setStatusCode(400);
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Error en deleteUser: ' . $e->getMessage());
+        
+        if ($this->userModel->delete($userId)) {
             return $this->response->setJSON([
-                'error' => 'Error interno del servidor'
-            ])->setStatusCode(500);
+                'message' => 'Usuario eliminado correctamente'
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'error' => 'Error al eliminar el usuario'
+            ])->setStatusCode(400);
         }
     }
     
     /**
-     * Save (crear o actualizar) a un usuario
+     * Save (create or update) a user
      */
     public function saveUser()
     {
@@ -248,16 +201,8 @@ class UserController extends BaseController
                 if ($this->userModel->save($updateData)) {
                     $this->userModel->transCommit();
                     $updatedUser = $this->userModel->find($info['id']);
-                    // Añadir la conversión a base64 de forma segura
-                    if (!empty($updatedUser['pfp']) && is_numeric($updatedUser['pfp'])) {
-                        try {
-                            $updatedUser['base64'] = $this->base64($updatedUser['pfp']);
-                        } catch (\Exception $e) {
-                            $updatedUser['base64'] = '';
-                        }
-                    } else {
-                        $updatedUser['base64'] = '';
-                    }
+                    // Añadir la conversión a base64
+                    $updatedUser['base64'] = $this->base64($updatedUser['pfp']);
                     return $this->response->setJSON([
                         'message' => 'Usuario actualizado correctamente',
                         'user' => $updatedUser
@@ -296,7 +241,11 @@ class UserController extends BaseController
     }
     
     /**
-     * Validamos los datos del usuario antes de guardar
+     * Validate user data for creation or update
+     * 
+     * @param array $info User data
+     * @param bool $isUpdate Whether this is an update or new record
+     * @throws \Exception If validation fails
      */
     private function validateUserData($info, $isUpdate)
     {
@@ -357,67 +306,55 @@ class UserController extends BaseController
     }
     
     /**
-     * Procesamos la foto de perfil del usuario
+     * Process profile picture upload
+     * 
+     * @param array $info User data
+     * @param bool $isUpdate Whether this is an update or new record
+     * @return array Updated user data
+     * @throws \Exception If file processing fails
      */
     private function processProfilePicture($info, $isUpdate)
     {
         // Procesar la foto de perfil solo si se proporciona
         if (isset($info['pfp']) && $info['pfp'] !== null && is_object($info['pfp'])) {
-            try {
-                // Verificar que la conexión a la base de datos esté disponible
-                if (!$this->userModel->db->connID) {
-                    throw new \Exception('Error de conexión a la base de datos');
+            $oid = pg_lo_create($this->userModel->connID);
+            if ($oid === false) {
+                throw new \Exception("No se pudo crear el objeto large");
+            }
+            
+            if ($info['pfp']->isValid() && !$info['pfp']->hasMoved()) {
+                $newName = $info['pfp']->getRandomName();
+                $info['pfp']->move(WRITEPATH . 'uploads', $newName);
+                $pfpPath = WRITEPATH . 'uploads/' . $newName;
+                
+                if (!file_exists($pfpPath)) {
+                    throw new \Exception('Error al mover el archivo: ' . $pfpPath);
                 }
                 
-                $oid = pg_lo_create($this->userModel->db->connID);
-                if ($oid === false) {
-                    throw new \Exception("No se pudo crear el objeto large");
+                $contenido = file_get_contents($pfpPath);
+                $handle = pg_lo_open($this->userModel->connID, $oid, 'w');
+                
+                if ($handle === false) {
+                    throw new \Exception('Error al abrir el objeto large para escritura');
                 }
                 
-                if ($info['pfp']->isValid() && !$info['pfp']->hasMoved()) {
-                    $newName = $info['pfp']->getRandomName();
-                    $info['pfp']->move(WRITEPATH . 'uploads', $newName);
-                    $pfpPath = WRITEPATH . 'uploads/' . $newName;
-                    
-                    if (!file_exists($pfpPath)) {
-                        throw new \Exception('Error al mover el archivo: ' . $pfpPath);
-                    }
-                    
-                    $contenido = file_get_contents($pfpPath);
-                    $handle = pg_lo_open($this->userModel->db->connID, $oid, 'w');
-                    
-                    if ($handle === false) {
-                        throw new \Exception('Error al abrir el objeto large para escritura');
-                    }
-                    
-                    if (pg_lo_write($handle, $contenido) === false) {
-                        throw new \Exception('Error al escribir en el objeto large');
-                    }
-                    
-                    pg_lo_close($handle);
-                    unlink($pfpPath);
-                    $info['pfp'] = $oid;
-                } elseif (ENVIRONMENT == "testing") {
-                    $newName = $info['pfp']->getRandomName();
-                    if (!copy($info['pfp']->getTempName(), WRITEPATH . 'uploads/' . $newName)) {
-                        throw new \Exception('Error al copiar el archivo de prueba');
-                    }
-                    $info['pfp'] = $oid;
+                if (pg_lo_write($handle, $contenido) === false) {
+                    throw new \Exception('Error al escribir en el objeto large');
                 }
-            } catch (\Exception $e) {
-                // En caso de error con la imagen, permitir continuar sin ella en testing
-                if (ENVIRONMENT === 'testing' && $isUpdate) {
-                    log_message('warning', 'Error al procesar imagen en testing: ' . $e->getMessage());
-                    unset($info['pfp']); // Remover la imagen del array para no procesarla
-                } else {
-                    throw $e;
+                
+                pg_lo_close($handle);
+                unlink($pfpPath);
+                $info['pfp'] = $oid;
+            } elseif (ENVIRONMENT == "testing") {
+                $newName = $info['pfp']->getRandomName();
+                if (!copy($info['pfp']->getTempName(), WRITEPATH . 'uploads/' . $newName)) {
+                    throw new \Exception('Error al copiar el archivo de prueba');
                 }
+                $info['pfp'] = $oid;
             }
         } elseif (!$isUpdate) {
-            // Si no hay pfp y es un registro, solo error si no estamos en testing
-            if (ENVIRONMENT !== 'testing') {
-                throw new \Exception('La foto de perfil es requerida para el registro');
-            }
+            // Si no hay pfp y es un registro, error
+            throw new \Exception('La foto de perfil es requerida para el registro');
         }
         
         return $info;
@@ -437,32 +374,25 @@ class UserController extends BaseController
         $jsonBody = $this->testing($jsonBody);
         $username = $jsonBody->username ?? null;
         
-        if (empty($username)) {
+        if (!$username) {
             return $this->response->setJSON([
                 'error' => 'El nombre de usuario es requerido'
             ])->setStatusCode(400);
         }
         
-        try {
-            $user = $this->userModel->where('username', $username)->first();
+        $user = $this->userModel->where('username', $username)->first();
+        
+        if ($user) {
+            // Process user data with friends and profile picture
+            $user = $this->processUserData($user);
             
-            if ($user) {
-                // Process user data with friends and profile picture
-                $user = $this->processUserData($user);
-                
-                return $this->response->setJSON([
-                    'message' => $user
-                ]);
-            } else {
-                return $this->response->setJSON([
-                    'error' => 'Usuario no encontrado'
-                ])->setStatusCode(404);
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Error en find: ' . $e->getMessage());
             return $this->response->setJSON([
-                'error' => 'Error interno del servidor'
-            ])->setStatusCode(500);
+                'message' => $user
+            ]);
+        } else {
+            return $this->response->setJSON([
+                'error' => 'Usuario no encontrado'
+            ])->setStatusCode(404);
         }
     }
     

@@ -28,3 +28,15 @@ INFO - 2025-06-04 11:08:44 --> DELETE FRIENDSHIP PERFECTO: Error esperado con ID
 INFO - 2025-06-04 11:08:44 --> DELETE FRIENDSHIP PERFECTO: Error HTTP esperado para datos vacíos - Status: 
 INFO - 2025-06-04 11:08:44 --> DELETE FRIENDSHIP PERFECTO: Error esperado para datos incompletos - Status: 
 INFO - 2025-06-04 11:08:44 --> DELETE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
+WARNING - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PARCIAL: Error inesperado - Status: 
+INFO - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PERFECTO: Error esperado con IDs válidos - Status: 
+INFO - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PERFECTO: Error esperado con IDs válidos - Status: 
+INFO - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PERFECTO: Error HTTP esperado para datos vacíos - Status: 
+INFO - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PERFECTO: Error esperado para datos incompletos - Status: 
+INFO - 2025-06-04 11:28:59 --> DELETE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
+WARNING - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PARCIAL: Error inesperado - Status: 
+INFO - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PERFECTO: Error esperado con IDs válidos - Status: 
+INFO - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PERFECTO: Error esperado con IDs válidos - Status: 
+INFO - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PERFECTO: Error HTTP esperado para datos vacíos - Status: 
+INFO - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PERFECTO: Error esperado para datos incompletos - Status: 
+INFO - 2025-06-04 11:31:01 --> DELETE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
