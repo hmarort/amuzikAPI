@@ -12,3 +12,17 @@ INFO - 2025-06-04 09:10:11 --> SAVE FRIENDSHIP PERFECTO: Error HTTP esperado par
 INFO - 2025-06-04 09:10:11 --> SAVE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
 INFO - 2025-06-04 09:10:11 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 
 INFO - 2025-06-04 09:10:11 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 
+WARNING - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad
+WARNING - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad
+WARNING - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad con IDs válidos
+INFO - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PERFECTO: Error HTTP esperado para datos vacíos - Status: 
+INFO - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
+INFO - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 
+INFO - 2025-06-04 10:58:49 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 
+WARNING - 2025-06-04 11:01:17 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad
+WARNING - 2025-06-04 11:01:17 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad
+WARNING - 2025-06-04 11:01:17 --> SAVE FRIENDSHIP PARCIAL: Error en la creación de amistad con IDs válidos
+INFO - 2025-06-04 11:01:17 --> SAVE FRIENDSHIP PERFECTO: Error HTTP esperado para datos vacíos - Status: 
+INFO - 2025-06-04 11:01:17 --> SAVE FRIENDSHIP PERFECTO: Error esperado para IDs iguales - Status: 
+INFO - 2025-06-04 11:01:18 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 
+INFO - 2025-06-04 11:01:18 --> SAVE FRIENDSHIP PERFECTO: Error esperado para usuarios inexistentes - Status: 

@@ -6,3 +6,11 @@ INFO - 2025-06-04 09:10:15 --> DELETE PERFECTO: Usuario eliminado correctamente.
 INFO - 2025-06-04 09:10:15 --> DELETE PERFECTO: Usuario eliminado correctamente. ID: 66
 WARNING - 2025-06-04 09:10:15 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 
 WARNING - 2025-06-04 09:10:15 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 
+WARNING - 2025-06-04 10:58:52 --> DELETE PARCIAL: Error al eliminar usuario. ID: 42
+WARNING - 2025-06-04 10:58:52 --> DELETE PARCIAL: Error al eliminar usuario. ID: 58
+WARNING - 2025-06-04 10:58:52 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 
+WARNING - 2025-06-04 10:58:52 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 
+INFO - 2025-06-04 11:01:21 --> DELETE PERFECTO: Usuario eliminado correctamente. ID: 96
+INFO - 2025-06-04 11:01:21 --> DELETE PERFECTO: Usuario eliminado correctamente. ID: 73
+WARNING - 2025-06-04 11:01:21 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 
+WARNING - 2025-06-04 11:01:21 --> DELETE PARCIAL: Respuesta inesperada para eliminación sin ID - Status: 

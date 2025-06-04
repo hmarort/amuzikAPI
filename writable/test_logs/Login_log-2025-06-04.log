@@ -10,3 +10,15 @@ ERROR - 2025-06-04 09:10:14 --> Respuesta del servidor: {
 }
 WARNING - 2025-06-04 09:10:14 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
 WARNING - 2025-06-04 09:10:14 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 10:58:52 --> ERROR EN LOGIN: Código de estado inesperado para rdietrich - Status: 
+ERROR - 2025-06-04 10:58:52 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 10:58:52 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 10:58:52 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 11:01:20 --> ERROR EN LOGIN: Código de estado inesperado para aauer - Status: 
+ERROR - 2025-06-04 11:01:20 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 11:01:20 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:01:20 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 

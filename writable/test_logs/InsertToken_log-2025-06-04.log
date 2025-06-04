@@ -22,3 +22,27 @@ INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado con espacio
 INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
 INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
 INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 
+ERROR - 2025-06-04 10:58:51 --> ERROR EN INSERT TOKEN: Código de estado inesperado - Status: 
+ERROR - 2025-06-04 10:58:51 --> Respuesta del servidor: {
+    "error": "El usuario especificado no existe"
+}
+WARNING - 2025-06-04 10:58:51 --> INSERT TOKEN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 10:58:51 --> INSERT TOKEN PARCIAL: Respuesta inesperada para token vacío - Status: 
+WARNING - 2025-06-04 10:58:51 --> INSERT TOKEN PARCIAL: Respuesta inesperada para ambos campos vacíos - Status: 
+WARNING - 2025-06-04 10:58:51 --> INSERT TOKEN PARCIAL: Respuesta inesperada para sin datos JSON - Status: 
+INFO - 2025-06-04 10:58:51 --> INSERT TOKEN PERFECTO: Error esperado con espacios - Status: 
+INFO - 2025-06-04 10:58:51 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
+INFO - 2025-06-04 10:58:51 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
+INFO - 2025-06-04 10:58:52 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 
+ERROR - 2025-06-04 11:01:20 --> ERROR EN INSERT TOKEN: Código de estado inesperado - Status: 
+ERROR - 2025-06-04 11:01:20 --> Respuesta del servidor: {
+    "error": "El usuario especificado no existe"
+}
+WARNING - 2025-06-04 11:01:20 --> INSERT TOKEN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:01:20 --> INSERT TOKEN PARCIAL: Respuesta inesperada para token vacío - Status: 
+WARNING - 2025-06-04 11:01:20 --> INSERT TOKEN PARCIAL: Respuesta inesperada para ambos campos vacíos - Status: 
+WARNING - 2025-06-04 11:01:20 --> INSERT TOKEN PARCIAL: Respuesta inesperada para sin datos JSON - Status: 
+INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado con espacios - Status: 
+INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
+INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
+INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 
