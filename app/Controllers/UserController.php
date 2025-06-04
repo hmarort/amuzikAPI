@@ -177,6 +177,7 @@ class UserController extends BaseController
         }
         
         $userId = $this->request->getJson()->id ?? null;
+        echo "USERID antes de testing(): ".$userId;
         $userId = $this->testing($userId)->id??null;
 
         echo "USERID: ".$userId;die(1);
