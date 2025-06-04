@@ -22,3 +22,9 @@ ERROR - 2025-06-04 11:01:20 --> Respuesta del servidor: {
 }
 WARNING - 2025-06-04 11:01:20 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
 WARNING - 2025-06-04 11:01:20 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 11:08:44 --> ERROR EN LOGIN: Código de estado inesperado para gorczany.maurice - Status: 
+ERROR - 2025-06-04 11:08:44 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 11:08:44 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:08:44 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 

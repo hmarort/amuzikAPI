@@ -46,3 +46,15 @@ INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado con espacio
 INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
 INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
 INFO - 2025-06-04 11:01:20 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 
+ERROR - 2025-06-04 11:08:44 --> ERROR EN INSERT TOKEN: Código de estado inesperado - Status: 
+ERROR - 2025-06-04 11:08:44 --> Respuesta del servidor: {
+    "error": "El usuario especificado no existe"
+}
+WARNING - 2025-06-04 11:08:44 --> INSERT TOKEN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 11:08:44 --> INSERT TOKEN PARCIAL: Respuesta inesperada para token vacío - Status: 
+WARNING - 2025-06-04 11:08:44 --> INSERT TOKEN PARCIAL: Respuesta inesperada para ambos campos vacíos - Status: 
+WARNING - 2025-06-04 11:08:44 --> INSERT TOKEN PARCIAL: Respuesta inesperada para sin datos JSON - Status: 
+INFO - 2025-06-04 11:08:44 --> INSERT TOKEN PERFECTO: Error esperado con espacios - Status: 
+INFO - 2025-06-04 11:08:44 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
+INFO - 2025-06-04 11:08:44 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
+INFO - 2025-06-04 11:08:44 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 

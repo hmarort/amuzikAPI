@@ -14,3 +14,7 @@ WARNING - 2025-06-04 11:01:20 --> USERINFO PARCIAL: Error inesperado. ID: 38 - S
 WARNING - 2025-06-04 11:01:21 --> USERINFO PARCIAL: Error inesperado. ID: 1 - Status: 
 WARNING - 2025-06-04 11:01:21 --> USERINFO PARCIAL: Error inesperado. ID: 1 - Status: 
 WARNING - 2025-06-04 11:01:21 --> USERINFO PARCIAL: Respuesta inesperada para falta de ID - Status: 
+INFO - 2025-06-04 11:08:45 --> USERINFO PERFECTO: Información de usuario obtenida correctamente. ID: 1
+INFO - 2025-06-04 11:08:45 --> USERINFO PERFECTO: Información de usuario obtenida correctamente. ID: 1
+WARNING - 2025-06-04 11:08:45 --> USERINFO PARCIAL: Error inesperado. ID: 1 - Status: 
+WARNING - 2025-06-04 11:08:45 --> USERINFO PARCIAL: Respuesta inesperada para falta de ID - Status: 
