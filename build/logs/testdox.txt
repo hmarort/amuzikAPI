@@ -3,12 +3,12 @@ Base Test Case (App\Base\BaseTestCase)
 
 Friend (App\Controllers\Friend)
  [x] 
- [ ] Save friendship
- [ ] Delete friendship
+ [x] Save friendship
+ [x] Delete friendship
 
 Token (App\Controllers\Token)
  [x] 
- [ ] Insert token
+ [x] Insert token
 
 User (App\Controllers\User)
  [x] 

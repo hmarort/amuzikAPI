@@ -1,0 +1,12 @@
+ERROR - 2025-06-04 09:09:48 --> ERROR EN LOGIN: Código de estado inesperado para sgorczany - Status: 
+ERROR - 2025-06-04 09:09:48 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 09:09:48 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 09:09:48 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 
+ERROR - 2025-06-04 09:10:14 --> ERROR EN LOGIN: Código de estado inesperado para gokuneva - Status: 
+ERROR - 2025-06-04 09:10:14 --> Respuesta del servidor: {
+    "error": "Credenciales inválidas"
+}
+WARNING - 2025-06-04 09:10:14 --> LOGIN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 09:10:14 --> LOGIN PARCIAL: Respuesta inesperada para password vacío - Status: 

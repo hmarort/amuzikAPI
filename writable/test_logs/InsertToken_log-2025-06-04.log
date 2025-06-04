@@ -1,0 +1,24 @@
+ERROR - 2025-06-04 09:09:47 --> ERROR EN INSERT TOKEN: Código de estado inesperado - Status: 
+ERROR - 2025-06-04 09:09:47 --> Respuesta del servidor: {
+    "error": "El usuario especificado no existe"
+}
+WARNING - 2025-06-04 09:09:47 --> INSERT TOKEN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 09:09:47 --> INSERT TOKEN PARCIAL: Respuesta inesperada para token vacío - Status: 
+WARNING - 2025-06-04 09:09:47 --> INSERT TOKEN PARCIAL: Respuesta inesperada para ambos campos vacíos - Status: 
+WARNING - 2025-06-04 09:09:47 --> INSERT TOKEN PARCIAL: Respuesta inesperada para sin datos JSON - Status: 
+INFO - 2025-06-04 09:09:47 --> INSERT TOKEN PERFECTO: Error esperado con espacios - Status: 
+INFO - 2025-06-04 09:09:47 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
+INFO - 2025-06-04 09:09:47 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
+INFO - 2025-06-04 09:09:48 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 
+ERROR - 2025-06-04 09:10:14 --> ERROR EN INSERT TOKEN: Código de estado inesperado - Status: 
+ERROR - 2025-06-04 09:10:14 --> Respuesta del servidor: {
+    "error": "El usuario especificado no existe"
+}
+WARNING - 2025-06-04 09:10:14 --> INSERT TOKEN PARCIAL: Respuesta inesperada para username vacío - Status: 
+WARNING - 2025-06-04 09:10:14 --> INSERT TOKEN PARCIAL: Respuesta inesperada para token vacío - Status: 
+WARNING - 2025-06-04 09:10:14 --> INSERT TOKEN PARCIAL: Respuesta inesperada para ambos campos vacíos - Status: 
+WARNING - 2025-06-04 09:10:14 --> INSERT TOKEN PARCIAL: Respuesta inesperada para sin datos JSON - Status: 
+INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado con espacios - Status: 
+INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado para username largo - Status: 
+INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado para token largo - Status: 
+INFO - 2025-06-04 09:10:14 --> INSERT TOKEN PERFECTO: Error esperado en primera inserción - Status: 

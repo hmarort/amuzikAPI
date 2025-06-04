@@ -1,0 +1,10 @@
+INFO - 2025-06-04 09:09:49 --> SAVE PERFECTO: Usuario creado correctamente. Usuario: wehner.carlie, Email: stephen71@oreilly.com
+WARNING - 2025-06-04 09:09:49 --> SAVE PARCIAL: Error inesperado en creación. Usuario: admin - Status: 
+WARNING - 2025-06-04 09:09:50 --> SAVE PARCIAL: Error inesperado en creación. Usuario: admin - Status: 
+INFO - 2025-06-04 09:09:50 --> UPDATE PERFECTO: Error en actualización. ID: 1 - Status: 
+WARNING - 2025-06-04 09:09:50 --> SAVE PARCIAL: Respuesta inesperada para datos incompletos
+INFO - 2025-06-04 09:10:16 --> SAVE PERFECTO: Usuario creado correctamente. Usuario: qratke, Email: christiansen.general@yahoo.com
+WARNING - 2025-06-04 09:10:16 --> SAVE PARCIAL: Error inesperado en creación. Usuario: admin - Status: 
+WARNING - 2025-06-04 09:10:16 --> SAVE PARCIAL: Error inesperado en creación. Usuario: admin - Status: 
+INFO - 2025-06-04 09:10:17 --> UPDATE PERFECTO: Error en actualización. ID: 1 - Status: 
+WARNING - 2025-06-04 09:10:17 --> SAVE PARCIAL: Respuesta inesperada para datos incompletos
