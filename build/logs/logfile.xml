@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/var/www/html/_/phpunit.xml" tests="12" assertions="46" errors="0" failures="0" skipped="0" time="10.962280">
-    <testsuite name="amuzik" tests="12" assertions="46" errors="0" failures="0" skipped="0" time="10.962280">
-      <testsuite name="App\Base\BaseTestCase" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.039656">
-        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Base\BaseTestCase" classname="App.Base.BaseTestCase" assertions="1" time="0.039656"/>
+  <testsuite name="/var/www/html/_/phpunit.xml" tests="12" assertions="46" errors="0" failures="0" skipped="0" time="11.225045">
+    <testsuite name="amuzik" tests="12" assertions="46" errors="0" failures="0" skipped="0" time="11.225045">
+      <testsuite name="App\Base\BaseTestCase" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.040228">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Base\BaseTestCase" classname="App.Base.BaseTestCase" assertions="1" time="0.040228"/>
       </testsuite>
-      <testsuite name="App\Controllers\FriendTest" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" tests="3" assertions="14" errors="0" failures="0" skipped="0" time="6.616067">
-        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="1" time="2.021031"/>
-        <testcase name="testSaveFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="38" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="7" time="2.444343"/>
-        <testcase name="testDeleteFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="206" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="6" time="2.150693"/>
+      <testsuite name="App\Controllers\FriendTest" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" tests="3" assertions="14" errors="0" failures="0" skipped="0" time="6.366702">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="1" time="2.158160"/>
+        <testcase name="testSaveFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="38" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="7" time="2.288717"/>
+        <testcase name="testDeleteFriendship" file="/var/www/html/_/tests/app/Controllers/FriendTest.php" line="206" class="App\Controllers\FriendTest" classname="App.Controllers.FriendTest" assertions="6" time="1.919825"/>
       </testsuite>
-      <testsuite name="App\Controllers\TokenTest" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" tests="2" assertions="10" errors="0" failures="0" skipped="0" time="0.666498">
-        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="1" time="0.004800"/>
-        <testcase name="testInsertToken" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" line="13" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="9" time="0.661699"/>
+      <testsuite name="App\Controllers\TokenTest" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" tests="2" assertions="10" errors="0" failures="0" skipped="0" time="0.724290">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="1" time="0.006608"/>
+        <testcase name="testInsertToken" file="/var/www/html/_/tests/app/Controllers/TokenTest.php" line="13" class="App\Controllers\TokenTest" classname="App.Controllers.TokenTest" assertions="9" time="0.717682"/>
       </testsuite>
-      <testsuite name="App\Controllers\UserTest" file="/var/www/html/_/tests/app/Controllers/UserTest.php" tests="6" assertions="21" errors="0" failures="0" skipped="0" time="3.640059">
-        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="1" time="0.004847"/>
-        <testcase name="testLogin" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="13" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="3" time="1.099580"/>
-        <testcase name="testUserInfo" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="99" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.435711"/>
-        <testcase name="testDeleteUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="213" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.146424"/>
-        <testcase name="testSaveUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="324" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="5" time="1.586602"/>
-        <testcase name="testFind" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="496" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.366895"/>
+      <testsuite name="App\Controllers\UserTest" file="/var/www/html/_/tests/app/Controllers/UserTest.php" tests="6" assertions="21" errors="0" failures="0" skipped="0" time="4.093825">
+        <testcase name="test" file="/var/www/html/_/tests/app/Base/BaseTestCase.php" line="23" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="1" time="0.004782"/>
+        <testcase name="testLogin" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="13" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="3" time="1.097945"/>
+        <testcase name="testUserInfo" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="99" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.464212"/>
+        <testcase name="testDeleteUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="213" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.147114"/>
+        <testcase name="testSaveUser" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="324" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="5" time="1.986704"/>
+        <testcase name="testFind" file="/var/www/html/_/tests/app/Controllers/UserTest.php" line="496" class="App\Controllers\UserTest" classname="App.Controllers.UserTest" assertions="4" time="0.393067"/>
       </testsuite>
     </testsuite>
   </testsuite>

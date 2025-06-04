@@ -15,7 +15,10 @@ class TokenController extends BaseController
         }
         
         $jsonBody = $this->request->getJSON();
-        $jsonBody = $this->testing($jsonBody);
+
+        if(empty($jsonBody)) {
+            $jsonBody = $this->testing($jsonBody);
+        }        
         
         $username = trim($jsonBody->username ?? '');
         $tokenMovil = trim($jsonBody->token_movil ?? '');

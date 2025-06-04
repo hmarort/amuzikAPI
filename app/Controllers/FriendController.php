@@ -16,7 +16,9 @@ class FriendController extends BaseController
         echo "\n";
         
         $jsonBody = $this->request->getJSON();
-        $jsonBody = $this->testing($jsonBody);
+        if(empty($jsonBody)) {
+            $jsonBody = $this->testing($jsonBody);
+        }
 
         if ($jsonBody && isset($jsonBody->user_id) && isset($jsonBody->friend_id)) {
             $user_id = $jsonBody->user_id;
@@ -89,7 +91,9 @@ class FriendController extends BaseController
         }
 
         $jsonBody = $this->request->getJSON();
-        $jsonBody = $this->testing($jsonBody);
+        if(empty($jsonBody)) {
+            $jsonBody = $this->testing($jsonBody);
+        }
 
         if (!$jsonBody || !isset($jsonBody->user_id) || !isset($jsonBody->friend_id)) {
             return $this->response->setStatusCode(400)
