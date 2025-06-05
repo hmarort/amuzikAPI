@@ -8,10 +8,7 @@ class UserController extends BaseController
 {
     
     /**
-     * Process user data with friends and profile picture
-     * 
-     * @param array $user User data
-     * @return array|null Processed user data
+     * Modelo de usuario
      */
     private function processUserData($user)
     {
@@ -44,9 +41,7 @@ class UserController extends BaseController
     }
     
     /**
-     * User login endpoint
-     * 
-     * @return ResponseInterface
+     * Login de usuario
      */
     public function login()
     {
@@ -97,7 +92,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Get user info by ID
+     * Obtener la info del usuario por su id
      */
     public function userInfo()
     {
@@ -129,7 +124,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Delete a user
+     * Eliminar a un usuario
      */
     public function deleteUser()
     {
@@ -161,7 +156,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Save (create or update) a user
+     * Crear o actualizar usuario
      */
     public function saveUser()
     {
@@ -180,8 +175,7 @@ class UserController extends BaseController
             
             // Verificar si es actualización o registro
             $isUpdate = isset($info['id']) && !empty($info['id']);
-            
-            // Validación común para ambos casos
+
             $this->validateUserData($info, $isUpdate);
             
             // Procesar la foto de perfil
@@ -190,7 +184,7 @@ class UserController extends BaseController
             // En caso de update, solo enviamos los campos que no están vacíos
             if ($isUpdate) {
                 // Creamos un array con solo los campos que se proporcionaron
-                $updateData = ['id' => $info['id']]; // Siempre incluimos el ID
+                $updateData = ['id' => $info['id']];
                 
                 // Solo incluimos campos que no estén vacíos
                 foreach ($info as $key => $value) {
@@ -243,11 +237,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Validate user data for creation or update
-     * 
-     * @param array $info User data
-     * @param bool $isUpdate Whether this is an update or new record
-     * @throws \Exception If validation fails
+     * Validar datos del usuario antes de guardar
      */
     private function validateUserData($info, $isUpdate)
     {
@@ -308,12 +298,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Process profile picture upload
-     * 
-     * @param array $info User data
-     * @param bool $isUpdate Whether this is an update or new record
-     * @return array Updated user data
-     * @throws \Exception If file processing fails
+     * Procesar imagen de perfil (pfp)
      */
     private function processProfilePicture($info, $isUpdate)
     {
@@ -363,7 +348,7 @@ class UserController extends BaseController
     }
     
     /**
-     * Find user by username
+     * Encontrar usuario por su username
      */
     public function find()
     {

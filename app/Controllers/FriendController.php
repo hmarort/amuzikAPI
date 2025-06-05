@@ -4,6 +4,9 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class FriendController extends BaseController
 {
+    /**
+     * Crear amistad entre dos usuarios.
+     */
     public function saveFriendship()
     {
         $tokenValidation = $this->validateToken();
@@ -77,7 +80,9 @@ class FriendController extends BaseController
                                  ]);
         }
     }
-
+    /**
+     * Eliminar amistad entre dos usuarios.
+     */
     public function deleteFriendship()
     {
         $tokenValidation = $this->validateToken();
