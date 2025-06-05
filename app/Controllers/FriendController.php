@@ -10,10 +10,6 @@ class FriendController extends BaseController
         if ($tokenValidation !== true) {
             return $tokenValidation;
         }
-
-        echo "\n\nBODY: ";
-        print_r($this->request->getPost());
-        echo "\n";
         
         $jsonBody = $this->request->getJSON();
         if(empty($jsonBody)) {
@@ -78,7 +74,6 @@ class FriendController extends BaseController
                                  ->setJSON([
                                      'status' => 'error', 
                                      'message' => 'Invalid input - user_id and friend_id are required',
-                                     'input' => $jsonBody
                                  ]);
         }
     }
