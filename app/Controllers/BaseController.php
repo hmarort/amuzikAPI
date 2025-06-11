@@ -44,7 +44,7 @@ abstract class BaseController extends Controller
     // protected $session;
     protected $filmModel;
     protected $userModel;
-    protected $friendModel;
+    protected $tokenModel;
     /**
      * @return void
      */
