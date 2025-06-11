@@ -35,13 +35,6 @@ class TokenController extends BaseController
             ])->setStatusCode(400);
         }
         
-        $userExists = $this->userModel->where('username', $username)->countAllResults();
-        if ($userExists === 0) {
-            return $this->response->setJSON([
-                'error' => 'El usuario especificado no existe'
-            ])->setStatusCode(404);
-        }
-        
         if (!isset($this->tokenModel)) {
             $this->tokenModel = new \App\Models\TokenModel();
         }
