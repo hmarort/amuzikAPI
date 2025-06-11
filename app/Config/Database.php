@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
     'DSN'          => '',
-    'schema'       => 'amuzik', // Puedes usar 'public' si no tienes uno personalizado.
+    'schema'       => 'amuzik',
     'hostname'     => 'ep-noisy-forest-aby2qzbl-pooler.eu-west-2.aws.neon.tech',
     'port'         => 5432,
     'username'     => 'amuzik_owner',
