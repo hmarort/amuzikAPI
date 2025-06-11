@@ -56,6 +56,7 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
         $this->userModel = new \App\Models\UserModel();
         $this->friendModel = new \App\Models\FriendModel();
+        $this->tokenModel = new \App\Models\TokenModel();
         $this->token = env('JWT_SECRET');
         // E.g.: $this->session = \Config\Services::session();
     }
